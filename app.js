@@ -1,4 +1,4 @@
-const form = document.querySelector('#signup-form');
+// const form = document.querySelector('#signup-form');
 
 const creditCardInput = document.querySelector('#cc');
 const termsCheckbox = document.querySelector('#terms');
@@ -6,7 +6,7 @@ const veggieSelect = document.querySelector('#veggie');
 
 const formData = {};
 for (let input of [creditCardInput, termsCheckbox, veggieSelect]) {
-    input.addEventListener('change', ({target}) => {
+    input.addEventListener('change', ({target}) => { //'input' vs 'change'
         const {name, type, value, checked} = target;
         formData[name] = type === 'checkbox' ? checked : value;
         console.log(formData);
